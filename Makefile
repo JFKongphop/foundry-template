@@ -30,8 +30,6 @@ ifeq (,$(wildcard .env))
 endif
 include .env
 
-dp:
-	forge script script/${c}.s.sol --broadcast --rpc-url $(HOLESKY)
-	
-dpvf:
-	forge script script/${c}.s.sol --broadcast --verify --rpc-url $(HOLESKY)
+deploy:
+	forge script script/${c}.s.sol --broadcast --verify --rpc-url $(HOLESKY) 
+
